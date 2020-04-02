@@ -1,0 +1,153 @@
+header {
+    line-height: 70px;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    background: rgba($color: #e0d0d0, $alpha: 0.4);
+    @include sp {
+        height: 100px;
+        display: none;
+        
+    }
+    
+}
+
+
+
+// .menu-btn {
+//     // visibility: hidden;
+//     @include sp {
+//         display: block;
+//         height: 50px;
+//         width: 50px;
+//         position: fixed;
+//         top: 0;
+//         right: 0;
+//         background: rgba(85, 75, 75,0.3);
+
+//     }
+
+// }
+
+// .menu-btn div {
+//     @include sp {
+//         height: 1px;
+//         width: 60%;
+//         background:white;
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, -50%);
+//         transition: .5s;
+//     }
+// }
+// .menu-btn div:nth-of-type(1) {
+//     transform: translate(-50%, -8px);
+// }
+// .menu-btn div:nth-of-type(3) {
+//     transform: translate(-50%, 8px);
+// }
+
+// .menu-btn.active div:nth-of-type(1) {
+//     transform: rotate(45deg) translate(-50%, 0);
+//     transform-origin: (0% 50%);
+// }
+// .menu-btn.active div:nth-of-type(2) {
+//     opacity: 0;
+// }
+// .menu-btn.active div:nth-of-type(3) {
+//     transform: rotate(-45deg) translate(-50%, 0);
+//     transform-origin: (0% 50%);
+
+    
+// }
+
+.nav {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    @include sp {
+        display: none;
+        position: fixed;
+
+    }
+}
+.nav li {
+    font-size: 50px;
+    font-family: 'Impact',sans-serif;
+    display: inline-block;
+    padding-right: 20px;
+    color: white;
+    border-right:solid medium rgb(233, 181, 71) ;
+    margin-left: 10px;
+
+    &:hover {
+        color: rgb(231, 192, 107);
+        cursor : pointer;
+    }
+}
+
+.h-icons {
+    display: none;
+    @include sp {
+        display: block;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+.insta-header {
+    display: none;
+    @include sp {
+        color: purple;
+        :hover {
+            color: rgb(231, 192, 107);
+            cursor : pointer;
+        }
+    }
+}
+.line-header {
+    display: none;
+    @include sp {
+        color: rgb(18, 175, 18);
+        :hover {
+            color: rgb(231, 192, 107);
+            cursor : pointer;
+        }
+
+    }
+}
+.insta-icon-header {
+    font-weight: 130;
+    font-size: 50px;
+    
+}
+.line-icon-header {
+    font-weight: 100;
+    font-size: 50px;
+}
+
+
+// .span-nav {
+//     opacity: 0;
+//     visibility: hidden;
+//     // position: fixed;
+//     &.active {
+//         opacity: 1;
+//         visibility: visible;
+//     }
+// }
+// .span-nav ul {
+//     height: 200px;
+//     background: rgba(146, 108, 108, 0.6);
+//     display: block;
+//     justify-content: center;
+//     // z-index: 10;
+// }
+// .span-nav li {
+//     transition: ease-in;
+//     transition: .2s;
+//     margin-left: 10px;
+//     color: lavender;
+//     font-size: 25px;
+// }

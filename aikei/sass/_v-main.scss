@@ -1,0 +1,31 @@
+.v-mainn {
+    margin-bottom: 15em;
+}
+.v-main {
+    height: 400px;
+    width: 100%;
+}
+.main-wrap {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.main-fra {
+    font-size: 90px;
+    color: rgb(141, 59, 59);
+    text-align: center;
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+        color: rgb(231, 192, 107);
+        cursor : pointer;
+    }
+    @include sp {
+        top: 150px;
+    }
+}
+.v-spa {
+    letter-spacing: 25px;
+}

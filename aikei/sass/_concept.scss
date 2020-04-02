@@ -1,0 +1,54 @@
+.concept-title {
+    width: 70%;
+    font-size: 60px;
+    color: white;
+    margin: 0 auto 50px;
+    &:hover {
+        color: rgb(158, 128, 63);
+        cursor : pointer;
+    }
+    @include sp {
+        display: flex;
+        justify-content: center;
+    }
+}
+.con-wrap {
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    @include sp {
+        display: block;
+    }
+
+}
+.con-img {
+    display: flex;
+    &1 {
+        height: 225px;
+        width: 160px;
+        border-radius: 10px;
+    }
+    @include sp {
+        display: block;
+        height: 250px;
+        width: 250px;
+        margin: 0 auto;
+    }
+}
+.con-img1 {
+    @include sp {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.con-p {
+    margin-left: 25px;
+    font-size: 27px;
+    text-align: left;
+    @include sp {
+        font-size: 20px;
+        margin-top: 15px;
+
+    }
+}

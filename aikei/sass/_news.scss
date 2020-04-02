@@ -1,0 +1,76 @@
+.news-wrap {
+    width: 70%;
+    margin: 0 auto 150px;
+    @include sp {
+        width: 90%;
+
+    }
+}
+.news-title {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 50px;
+    &:hover {
+        color: rgb(158, 128, 63);
+        cursor : pointer;
+    }
+    @include sp {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: center;
+    }
+}
+.news-item1 {
+    font-size: 25px;
+    margin: 0 0 20px 50px;
+    &-p1 {
+        font-size: 25px;
+        margin: 10px 0 0 20px;
+    }
+    &:hover {
+        color: rgb(158, 128, 63);
+
+    }
+    @include sp {
+    margin: 0 0 40px 10px;
+
+    }
+}
+.news-item2 {
+    font-size: 25px;
+    margin: 0 0 20px 50px;
+    &-p2 {
+        font-size: 25px;
+        margin: 10px 0 0 20px;
+    }
+    &:hover {
+        color: rgb(158, 128, 63);
+    }
+    @include sp {
+        margin: 0 0 40px 10px;
+    
+        }
+}
+.news-item3 {
+    font-size: 25px;
+    margin: 0 0 20px 50px;
+    &-p3 {
+        font-size: 25px;
+        margin: 10px 0 0 20px;
+    }
+    &:hover {
+        color: rgb(158, 128, 63);
+    }
+    @include sp {
+        margin: 0 0 20px 10px;
+        font-size: 25px;
+    
+        }
+}
+.news-item-p {
+    @include sp {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+}
+

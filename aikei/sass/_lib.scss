@@ -1,0 +1,32 @@
+body {
+    background: linear-gradient(-135deg, rgb(235, 44, 44), rgba(250, 184, 85, 0.877));
+    font-family: 'Impact',sans-serif;
+    font-weight: bolder;
+    margin: 0;
+    // height: 100%;
+    // display: none;
+}
+.title {
+    font-size: 50px;
+    color: white;
+    margin-bottom: 25px;
+    &:hover {
+        color: rgb(158, 128, 63);
+
+    }
+}
+
+
+
+@mixin pc {
+    @media screen and (min-width:1240px){
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width:710px){
+        @content;
+    }
+}
+
