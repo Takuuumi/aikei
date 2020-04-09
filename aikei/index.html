@@ -13,28 +13,19 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-       
-     
-
-        <!--ハンバーガーメニュー-->
-        <!--aikon-->
-        <!-- <a class="menu-btn" id="M
-            enuBtn">
-           <div></div>
-           <div></div>
-           <div></div>
-        </a> -->
-        <!--nav-->
-        <!--ハンバーガーメニュー-->
-
-
-        
+    <header> 
+        <!---ハンバーガーメニュー-->
+        <a class="menuBotton" id="menuButton">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+        <!---/ハンバーガーメニュー-->
         <div class="nav" id="nav">
             <ul>
-                <li class="news-li"><a>NEWS</a></li>
-                <li class="about-li"><a>ABOUT ME</a></li>
-                <li class="con-li"><a>CONCEPT</a></li>
+                <li class="news-li"><a class="nav-a" href="#news-nav">NEWS</a></li>
+                <li class="about-li"><a class="nav-a" href="#about-nav">ABOUT</a></li>
+                <li class="con-li"><a class="nav-a" href="#con-nav">CONCEPT</a></li>
             </ul>
         </div>
         <div class="h-icons">
@@ -46,21 +37,27 @@
             </a>
         </div>
     </header>
-
-
+    
     <main>
-
-    <section class="v-mainn">
+        
+        <section class="v-mainn">
+            <div id="v-nav">
+                <ul>
+                    <li>NEWS</li>
+                    <li>ABOUT</li>
+                    <li>CONCEPT</li>
+                </ul>
+            </div>
         <div class="v-main">
             <div class="main-wrap">
                 <div class="main-fra">
-                    <a>TENNIS CLUB<br><span class="v-spa">STORY</span></a>
-            </div>
+                    <div class="fra-a">TENNIS<br>CLUB<br><span class="v-spa">STORY</span></div>
+                </div>
         </div>
     </section>
     <section class="news">
         <div class="news-wrap">
-            <div class="news-title">
+            <div id="news-nav"class="news-title">
                 
                 NEWS
                 
@@ -86,7 +83,7 @@
 
     <section class="about">
         
-        <div class="about-title">
+        <div id="about-nav" class="about-title">
             ABOUT ME
         </div>
         
@@ -125,7 +122,7 @@
     </section>
 
     <section class="concept">
-        <div class="concept-title">
+        <div id="con-nav" class="concept-title">
             CONCEPT
         </div>
         <div class="con-wrap">
@@ -148,10 +145,10 @@
         <!-- </div> -->
                 <div class="footer-icon-wrap">
                     <a href="https://www.instagram.com/tennis.coach.ren/?hl=ja" class="footer-icon"> 
-                        <i class="fab fa-instagram-square insta-icon-header"></i>
+                        <i id="ins-icon" class="fab fa-instagram-square insta-icon-header"></i>
                     </a>
                     <a href="https://lin.ee/xPNh957" class="footer-icon-1"> 
-                    <i class="fab fa-line line-icon-header"></i>
+                    <i id="line-icon" class="fab fa-line line-icon-header"></i>
                     </a>
                 </div>
         <div id="page_top"><a href="#"></a></div>
@@ -174,6 +171,12 @@
 
     //fade in
     $(function() {
+    $('#menuButton').click(function() {
+        $('body,html').animate( {
+            scrollTop:0
+        })
+        return false;
+    })
     let pagetop = $('#page_top');   
     pagetop.hide();
     $(window).scroll(function () {
@@ -256,6 +259,54 @@
         }, 600); //0.6秒かけてトップへ移動
         return false;
     });
+
+    $('.fra-a').hover(
+  function() {
+    $(this).animate({
+      'font-size':'100px'
+    }, 400);
+  },
+  function(){
+    $(this).animate({
+      'font-size':'90px'
+    }, 300);
+  })
+
+  $('#ins-icon').hover(
+  function() {
+    $(this).animate({
+      'font-size':'50px'
+    }, 500);
+  },
+  function(){
+    $(this).animate({
+      'font-size':'45px'
+    }, 200);
+  }
+  )
+
+  $('#line-icon').hover(
+  function() {
+    $(this).animate({
+      'font-size':'50px'
+    }, 500);
+  },
+  function(){
+    $(this).animate({
+      'font-size':'45px'
+    }, 200);
+  }
+  )
+
+  $('header a').click(function() {
+    var id = $(this).attr('href');
+    var position = $(id).offset().top - 80;
+    $('html, body').animate({
+      'scrollTop':position
+    }, 500);
+  })
+  
+
 });
 
     

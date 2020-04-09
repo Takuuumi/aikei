@@ -15,6 +15,10 @@ body {
   color: #9e803f;
 }
 
+a {
+  text-decoration: none;
+}
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -81,13 +85,75 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: rgba(224, 208, 208, 0.4);
 }
 
 @media screen and (max-width: 710px) {
   header {
     height: 100px;
-    display: none;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton {
+    display: block;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton div {
+    height: 1px;
+    width: 60%;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton div:nth-of-type(1) {
+    -webkit-transform: translate(-50%, -10px);
+            transform: translate(-50%, -10px);
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton div:nth-of-type(3) {
+    -webkit-transform: translate(-50%, 10px);
+            transform: translate(-50%, 10px);
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton.active div:nth-of-type(1) {
+    -webkit-transform: rotate(45deg) translate(-50%, 0);
+            transform: rotate(45deg) translate(-50%, 0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton.active div:nth-of-type(2) {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 710px) {
+  .menuBotton.active div:nth-of-type(3) {
+    -webkit-transform: rotate(-45deg) translate(-50%, 0);
+            transform: rotate(-45deg) translate(-50%, 0);
+    -webkit-transform-origin: 0% 50%;
+            transform-origin: 0% 50%;
   }
 }
 
@@ -121,6 +187,10 @@ header {
 .nav li:hover {
   color: #e7c06b;
   cursor: pointer;
+}
+
+.nav-a {
+  color: white;
 }
 
 .h-icons {
@@ -192,7 +262,7 @@ header {
   font-size: 90px;
   color: #8d3b3b;
   text-align: center;
-  position: absolute;
+  position: relative;
   top: 250px;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -207,11 +277,31 @@ header {
 @media screen and (max-width: 710px) {
   .main-fra {
     top: 150px;
+    font-size: 70px;
   }
 }
 
 .v-spa {
   letter-spacing: 25px;
+}
+
+#v-nav {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+#v-nav.active {
+  opacity: 1;
+  visibility: visible;
+  background: white;
+  height: 500px;
+}
+
+#v-nav.active li {
+  font-size: 60px;
+  margin-bottom: 20px;
 }
 
 .news-wrap {
@@ -545,6 +635,11 @@ header {
 
 .footer-icon {
   margin-left: 40px;
+  font-size: 40px;
+}
+
+.ins-icon {
+  font-size: 50px;
 }
 
 .footer-icon-1 {

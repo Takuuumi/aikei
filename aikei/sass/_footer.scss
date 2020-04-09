@@ -32,9 +32,13 @@
 }
 .footer-icon {
     margin-left: 40px;
+    font-size: 40px;
     @include sp {
         
     }
+}
+.ins-icon {
+    font-size: 50px;
 }
 .footer-icon-1 {
     color: rgb(18, 175, 18);

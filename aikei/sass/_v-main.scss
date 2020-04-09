@@ -14,7 +14,7 @@
     font-size: 90px;
     color: rgb(141, 59, 59);
     text-align: center;
-    position: absolute;
+    position: relative;
     top: 250px;
     left: 50%;
     transform: translateX(-50%);
@@ -24,8 +24,32 @@
     }
     @include sp {
         top: 150px;
+        font-size: 70px;
+        
     }
 }
 .v-spa {
     letter-spacing: 25px;
+}
+
+
+
+
+#v-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+#v-nav.active {
+    opacity: 1;
+    visibility: visible;
+    background: white;
+    height: 500px;
+    // position: fixed;
+}
+
+#v-nav.active li {
+    font-size: 60px;
+    margin-bottom: 20px;
 }
